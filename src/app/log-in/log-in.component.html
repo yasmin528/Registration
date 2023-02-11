@@ -1,0 +1,44 @@
+<div class="mx-5 my-5 container">
+  <h2>Log in</h2>
+  <i class="bi bi-person-circle person"></i>
+  <form #form="ngForm" class="w-25 container" (submit)="logIn()">
+    <div class="row mb-3">
+      <label class="col-sm-2 col-form-label">Email:</label>
+      <input
+        name="email"
+        type="email"
+        pattern="[a-zA-Z0-9._%+-]+@[a-z0-9.-]+\.[a-zA-Z]{2,4}"
+        class="form-control w-100"
+        [(ngModel)]="email"
+        required
+        placeholder="Enter Email.."
+      />
+    </div>
+    <div class="row mb-3">
+      <label class="col-sm-2 col-form-label">Password:</label>
+      <input
+        name="password"
+        type="password"
+        class="form-control w-100"
+        [(ngModel)]="password"
+        minlength="1"
+        required
+        placeholder="Enter Password.."
+      />
+    </div>
+    <input
+      type="submit"
+      value="Log in"
+      class="login-btn"
+      [disabled]="form.invalid"
+    />
+  </form>
+  <a
+    href="https://accounts.google.com/v3/signin/identifier?dsh=S1409704747%3A1676125527738061&authuser=0&continue=https%3A%2F%2Fmail.google.com&ec=GAlAFw&hl=en&service=mail&flowName=GlifWebSignIn&flowEntry=AddSession"
+    ><i class="bi bi-google google fa-5x"></i
+  ></a>
+  <a href="https://www.facebook.com/"
+    ><i class="bi bi-facebook facebook fa-4x"></i
+  ></a>
+  <a routerLink="/SignUP" class="d-block signup">Create account</a>
+</div>

@@ -1,0 +1,27 @@
+.container{
+  text-align: center;
+}
+.h2{
+  text-align: center;
+  color: white;
+}
+.person{
+  font-size: 100px;
+  color: rgba(6, 97, 21) ;
+}
+.signup-btn{
+  width: 250px;
+  height: 50px;
+  border-radius: 5px;
+  margin: auto;
+  margin-top: 10px;
+  color: white;
+  font-size: larger;
+  background-color: rgb(6, 97, 21);
+}
+.signup-btn:hover{
+  background-color: rgba(6, 97, 21, 0.753);
+}
+.signup-btn:disabled{
+  background-color: rgba(6, 97, 21, 0.532);
+}
